@@ -6,6 +6,7 @@ from langchain.chat_models import ChatOpenAI
 from collections import defaultdict
 
 
+
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
 if 'past' not in st.session_state:
@@ -21,7 +22,7 @@ def get_text():
     return user_input
 
 st.title('Chatbot with GPT-3.5 Turbo')
-api_key = st.sidebar.text_input('API Key', type='password')
+api_key = st.secrets['openai_api_key']
 
 if api_key:
     llm = ChatOpenAI(
