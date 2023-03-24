@@ -36,7 +36,9 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
         pip install streamlit
         pip install openai
-        streamlit run main.py
     - name: Test with pytest
       run: |
         pytest
+    - name: Run complete
+      run: |
+        streamlit run main.py
