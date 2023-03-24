@@ -39,6 +39,3 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-    - name: Run complete
-      run: |
-        streamlit run main.py
